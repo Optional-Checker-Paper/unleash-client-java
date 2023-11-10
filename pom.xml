@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>3.39.0</version>
+            <version>3.40.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -415,7 +415,7 @@
                                 <path>
                                     <groupId>org.checkerframework</groupId>
                                     <artifactId>checker</artifactId>
-                                    <version>3.39.0</version>
+                                    <version>3.40.0</version>
                                 </path>
                             </annotationProcessorPaths>
                             <annotationProcessors>
@@ -427,6 +427,7 @@
                                 <arg>10000</arg>
                                 <arg>-Xmaxwarns</arg>
                                 <arg>10000</arg>
+                                <arg>-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno</arg>
                                 <!-- <arg>-Awarns</arg> --> <!-- -Awarns turns type-checking errors into warnings. -->
                             </compilerArgs>
                         </configuration>
