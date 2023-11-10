@@ -6,7 +6,9 @@
     <version>8.3.1-SNAPSHOT</version>
 
     <properties>
-        <version.slf4j>2.0.4</version.slf4j>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <version.slf4j>2.0.9</version.slf4j>
         <version.log4j2>2.19.0</version.log4j2>
         <version.junit5>5.9.0</version.junit5>
         <version.okhttp>4.10.0</version.okhttp>
@@ -55,6 +57,11 @@
     </scm>
 
     <dependencies>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
+            <version>3.40.0</version>
+        </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -171,15 +178,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.12.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -400,6 +398,113 @@
         </plugins>
     </reporting>
     <profiles>
+        <profile>
+            <id>checkerframework</id>
+            <!-- If you omit the activation block, run mvn with "-P checkerframework" to run checkers. -->
+            <activation>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.10.1</version>
+                        <configuration>
+                            <fork>true</fork> <!-- Must fork or else JVM arguments are ignored. -->
+                            <annotationProcessorPaths>
+                                <path>
+                                    <groupId>org.checkerframework</groupId>
+                                    <artifactId>checker</artifactId>
+                                    <version>3.40.0</version>
+                                </path>
+                            </annotationProcessorPaths>
+                            <annotationProcessors>
+                                <!-- Add all the checkers you want to enable here -->
+                                <annotationProcessor>org.checkerframework.checker.optional.OptionalChecker</annotationProcessor>
+                            </annotationProcessors>
+                            <compilerArgs>
+                                <arg>-Xmaxerrs</arg>
+                                <arg>10000</arg>
+                                <arg>-Xmaxwarns</arg>
+                                <arg>10000</arg>
+                                <arg>-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno</arg>
+                                <!-- <arg>-Awarns</arg> --> <!-- -Awarns turns type-checking errors into warnings. -->
+                            </compilerArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>checkerframework-jdk8</id>
+            <activation>
+                <jdk>1.8</jdk>
+            </activation>
+            <!-- using github.com/google/error-prone-javac is required when running on JDK 8 -->
+            <properties>
+                <javac.version>9+181-r4173-1</javac.version>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- This plugin execution will copy the com.google.errorprone:javac jar file to
+                             your project’s output directory without adding that jar as an explicit
+                             dependency. -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>copy</goal>
+                                </goals>
+                                <phase>process-sources</phase>
+                                <configuration>
+                                    <artifact>com.google.errorprone:javac:${javac.version}:jar</artifact>
+                                    <outputDirectory>${project.build.directory}/javac</outputDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <compilerArgs combine.children="append">
+                                <arg>-J-Xbootclasspath/p:${project.build.directory}/javac/javac-${javac.version}.jar</arg>
+                            </compilerArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>checkerframework-jdk9orlater</id>
+            <activation>
+                <jdk>[9,)</jdk>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <compilerArgs combine.children="append">
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+                                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+                                <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+                            </compilerArgs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>sonatype-release</id>
             <activation>
