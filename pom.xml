@@ -428,6 +428,7 @@
                                 <arg>-Xmaxwarns</arg>
                                 <arg>10000</arg>
                                 <arg>-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno</arg>
+                                <arg>-AassumePure</arg>
                                 <!-- <arg>-Awarns</arg> --> <!-- -Awarns turns type-checking errors into warnings. -->
                             </compilerArgs>
                         </configuration>

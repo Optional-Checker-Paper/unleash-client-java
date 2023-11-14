@@ -11,6 +11,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ConstraintMerger {
+
+    @SuppressWarnings(
+            "introduce.eliminate") // introduce-eliminate : unnecessary optional instantiation
     public static List<Constraint> mergeConstraints(
             IFeatureRepository repository, ActivationStrategy strategy) {
         return Stream.of(
