@@ -34,7 +34,8 @@ public class StringConstraintOperator implements ConstraintOperator {
         }
     }
 
-    @SuppressWarnings("optional.parameter") // optional-parameter : use of optional as a parameter
+    @SuppressWarnings(
+            "optional:optional.parameter") // optional-parameter : use of optional as a parameter
     private boolean endsWith(
             List<String> values, Optional<String> contextValue, boolean caseInsensitive) {
         return contextValue
@@ -55,7 +56,8 @@ public class StringConstraintOperator implements ConstraintOperator {
                 .orElse(false);
     }
 
-    @SuppressWarnings("optional.parameter") // optional-parameter : use of optional as a parameter
+    @SuppressWarnings(
+            "optional:optional.parameter") // optional-parameter : use of optional as a parameter
     private boolean startsWith(
             List<String> values, Optional<String> contextValue, boolean caseInsensitive) {
         return contextValue
@@ -76,7 +78,8 @@ public class StringConstraintOperator implements ConstraintOperator {
                 .orElse(false);
     }
 
-    @SuppressWarnings("optional.parameter") // optional-parameter : use of optional as a parameter
+    @SuppressWarnings(
+            "optional:optional.parameter") // optional-parameter : use of optional as a parameter
     private boolean contains(
             List<String> values, Optional<String> contextValue, boolean caseInsensitive) {
         return contextValue
@@ -97,7 +100,8 @@ public class StringConstraintOperator implements ConstraintOperator {
                 .orElse(false);
     }
 
-    @SuppressWarnings("optional.parameter") // optional-parameter : use of optional as a parameter
+    @SuppressWarnings(
+            "optional:optional.parameter") // optional-parameter : use of optional as a parameter
     private boolean isIn(List<String> values, Optional<String> value, boolean caseInsensitive) {
         return value.map(
                         v ->

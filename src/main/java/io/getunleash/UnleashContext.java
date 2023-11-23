@@ -10,22 +10,22 @@ import java.util.Optional;
 
 public class UnleashContext {
 
-    @SuppressWarnings("optional.field") // optional-field : use of optional as a field
+    @SuppressWarnings("optional:optional.field") // optional-field : use of optional as a field
     private final Optional<String> appName;
 
-    @SuppressWarnings("optional.field") // optional-field : use of optional as a field
+    @SuppressWarnings("optional:optional.field") // optional-field : use of optional as a field
     private final Optional<String> environment;
 
-    @SuppressWarnings("optional.field") // optional-field : use of optional as a field
+    @SuppressWarnings("optional:optional.field") // optional-field : use of optional as a field
     private final Optional<String> userId;
 
-    @SuppressWarnings("optional.field") // optional-field : use of optional as a field
+    @SuppressWarnings("optional:optional.field") // optional-field : use of optional as a field
     private final Optional<String> sessionId;
 
-    @SuppressWarnings("optional.field") // optional-field : use of optional as a field
+    @SuppressWarnings("optional:optional.field") // optional-field : use of optional as a field
     private final Optional<String> remoteAddress;
 
-    @SuppressWarnings("optional.field") // optional-field : use of optional as a field
+    @SuppressWarnings("optional:optional.field") // optional-field : use of optional as a field
     private final Optional<ZonedDateTime> currentTime;
 
     private final Map<String, String> properties;

@@ -660,7 +660,8 @@ public class UnleashConfig {
         }
 
         @SuppressWarnings(
-                "introduce.eliminate") // introduce-eliminate : unnecessary optional instantiation
+                "optional:introduce.eliminate") // introduce-eliminate : unnecessary optional
+        // instantiation
         public UnleashConfig build() {
             return new UnleashConfig(
                     unleashAPI,
@@ -696,7 +697,8 @@ public class UnleashConfig {
         }
 
         @SuppressWarnings(
-                "introduce.eliminate") // introduce-eliminate : unnecessary optional instantiation
+                "optional:introduce.eliminate") // introduce-eliminate : unnecessary optional
+        // instantiation
         public String getDefaultSdkVersion() {
             String version =
                     Optional.ofNullable(getClass().getPackage().getImplementationVersion())
