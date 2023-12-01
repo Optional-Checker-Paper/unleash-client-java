@@ -378,6 +378,20 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--SpotBugs Plugin-->
+            <plugin>
+  <groupId>com.github.spotbugs</groupId>
+  <artifactId>spotbugs-maven-plugin</artifactId>
+  <version>4.8.1.0</version>
+  <dependencies>
+    <!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
+    <dependency>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs</artifactId>
+      <version>4.8.2</version>
+    </dependency>
+  </dependencies>
+</plugin>
         </plugins>
     </build>
     <reporting>
