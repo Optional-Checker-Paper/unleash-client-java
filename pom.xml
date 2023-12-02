@@ -182,7 +182,7 @@
           <encoding>UTF-8</encoding>
           <compilerArgs>
             <arg>-XDcompilePolicy=simple</arg>
-            <arg>-Xplugin:ErrorProne</arg>
+            <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:NullOptional -Xep:NullableOptional -Xep:OptionalMapToOptional -Xep:OptionalNotPresent -Xep:OptionalEquality -Xep:OptionalMapUnusedValue -Xep:OptionalOfRedundantMethod -Xep:UnnecessaryOptionalGet</arg>
           </compilerArgs>
           <annotationProcessorPaths>
             <path>
