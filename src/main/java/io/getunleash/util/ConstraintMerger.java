@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ConstraintMerger {
+    @SuppressWarnings("OptionalOfNullableMisuse") // intellij-suppression-optional-of-nullable-misuse-introduce-eliminate
     public static List<Constraint> mergeConstraints(
             IFeatureRepository repository, ActivationStrategy strategy) {
         return Stream.of(

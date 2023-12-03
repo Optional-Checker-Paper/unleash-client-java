@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 public class HttpFeatureFetcher implements FeatureFetcher {
     private static final Logger LOG = LoggerFactory.getLogger(HttpFeatureFetcher.class);
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private Optional<String> etag = Optional.empty();
 
     private final UnleashConfig config;

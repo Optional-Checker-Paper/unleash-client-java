@@ -1,0 +1,67 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/ActivationStrategy.java</file>
+  <line>31</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.ActivationStrategy ActivationStrategy(java.lang.String name, java.util.Map&lt;java.lang.String,java.lang.String&gt; parameters, java.util.List&lt;io.getunleash.Constraint&gt; constraints, java.util.List&lt;java.lang.Integer&gt; segments, java.util.List&lt;io.getunleash.variant.VariantDefinition&gt; variants)" />
+  <problem_class id="OptionalOfNullableMisuse" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use of Optional.ofNullable with null or not-null argument</problem_class>
+  <description>'Optional.ofNullable()' with non-null argument should be replaced with 'Optional.of()'</description>
+  <highlighted_element>constraints</highlighted_element>
+  <language>JAVA</language>
+  <offset>47</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/ActivationStrategy.java</file>
+  <line>32</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.ActivationStrategy ActivationStrategy(java.lang.String name, java.util.Map&lt;java.lang.String,java.lang.String&gt; parameters, java.util.List&lt;io.getunleash.Constraint&gt; constraints, java.util.List&lt;java.lang.Integer&gt; segments, java.util.List&lt;io.getunleash.variant.VariantDefinition&gt; variants)" />
+  <problem_class id="OptionalOfNullableMisuse" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use of Optional.ofNullable with null or not-null argument</problem_class>
+  <description>'Optional.ofNullable()' with non-null argument should be replaced with 'Optional.of()'</description>
+  <highlighted_element>segments</highlighted_element>
+  <language>JAVA</language>
+  <offset>44</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/ActivationStrategy.java</file>
+  <line>33</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.ActivationStrategy ActivationStrategy(java.lang.String name, java.util.Map&lt;java.lang.String,java.lang.String&gt; parameters, java.util.List&lt;io.getunleash.Constraint&gt; constraints, java.util.List&lt;java.lang.Integer&gt; segments, java.util.List&lt;io.getunleash.variant.VariantDefinition&gt; variants)" />
+  <problem_class id="OptionalOfNullableMisuse" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use of Optional.ofNullable with null or not-null argument</problem_class>
+  <description>'Optional.ofNullable()' with non-null argument should be replaced with 'Optional.of()'</description>
+  <highlighted_element>variants</highlighted_element>
+  <language>JAVA</language>
+  <offset>44</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/util/ConstraintMerger.java</file>
+  <line>17</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.util</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.util.ConstraintMerger java.util.List&lt;io.getunleash.Constraint&gt; mergeConstraints(io.getunleash.repository.IFeatureRepository repository, io.getunleash.ActivationStrategy strategy)" />
+  <problem_class id="OptionalOfNullableMisuse" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use of Optional.ofNullable with null or not-null argument</problem_class>
+  <description>'Optional.ofNullable()' with non-null argument should be replaced with 'Optional.of()'</description>
+  <highlighted_element>strategy.getConstraints()</highlighted_element>
+  <language>JAVA</language>
+  <offset>44</offset>
+  <length>25</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/util/ConstraintMerger.java</file>
+  <line>19</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.util</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.util.ConstraintMerger java.util.List&lt;io.getunleash.Constraint&gt; mergeConstraints(io.getunleash.repository.IFeatureRepository repository, io.getunleash.ActivationStrategy strategy)" />
+  <problem_class id="OptionalOfNullableMisuse" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use of Optional.ofNullable with null or not-null argument</problem_class>
+  <description>'Optional.ofNullable()' with non-null argument should be replaced with 'Optional.of()'</description>
+  <highlighted_element>strategy.getSegments()</highlighted_element>
+  <language>JAVA</language>
+  <offset>44</offset>
+  <length>22</length>
+</problem>
+</problems>

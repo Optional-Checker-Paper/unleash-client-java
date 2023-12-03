@@ -19,6 +19,7 @@ public final class HttpToggleFetcher implements ToggleFetcher {
     private static final Logger LOG = LoggerFactory.getLogger(HttpToggleFetcher.class);
 
     private static final int CONNECT_TIMEOUT = 10000;
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private Optional<String> etag = Optional.empty();
 
     private final URL toggleUrl;

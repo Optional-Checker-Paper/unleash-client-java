@@ -20,6 +20,7 @@ public final class ActivationStrategy {
                 Collections.emptyList());
     }
 
+    @SuppressWarnings("OptionalOfNullableMisuse") // intellij-suppression-optional-of-nullable-misuse-introduce-eliminate
     public ActivationStrategy(
             String name,
             @Nullable Map<String, String> parameters,

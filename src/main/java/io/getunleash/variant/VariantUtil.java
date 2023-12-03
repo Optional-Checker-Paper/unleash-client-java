@@ -66,6 +66,7 @@ public final class VariantUtil {
         return "" + randSeed;
     }
 
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private static String getSeed(UnleashContext unleashContext, Optional<String> stickiness) {
         return stickiness
                 .map(s -> unleashContext.getByName(s).orElse(randomString()))

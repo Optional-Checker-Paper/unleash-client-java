@@ -1,0 +1,158 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/UnleashContext.java</file>
+  <line>12</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.UnleashContext appName" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for field 'appName'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>125</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/UnleashContext.java</file>
+  <line>13</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.UnleashContext environment" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for field 'environment'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>169</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/UnleashContext.java</file>
+  <line>14</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.UnleashContext userId" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for field 'userId'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>280</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/UnleashContext.java</file>
+  <line>15</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.UnleashContext sessionId" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for field 'sessionId'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>323</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/UnleashContext.java</file>
+  <line>16</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.UnleashContext remoteAddress" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for field 'remoteAddress'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>428</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/UnleashContext.java</file>
+  <line>17</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.UnleashContext currentTime" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;ZonedDateTime&gt;&lt;/code&gt; used as type for field 'currentTime'</description>
+  <highlighted_element>Optional&lt;ZonedDateTime&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>478</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/repository/HttpToggleFetcher.java</file>
+  <line>22</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.repository</package>
+  <entry_point TYPE="field" FQNAME="io.getunleash.repository.HttpToggleFetcher etag" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for field 'etag'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>119</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/strategy/constraints/StringConstraintOperator.java</file>
+  <line>38</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.strategy.constraints</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.strategy.constraints.StringConstraintOperator boolean endsWith(java.util.List&lt;java.lang.String&gt; values, java.util.Optional&lt;java.lang.String&gt; contextValue, boolean caseInsensitive)" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for parameter 'contextValue'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>33</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/strategy/constraints/StringConstraintOperator.java</file>
+  <line>58</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.strategy.constraints</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.strategy.constraints.StringConstraintOperator boolean startsWith(java.util.List&lt;java.lang.String&gt; values, java.util.Optional&lt;java.lang.String&gt; contextValue, boolean caseInsensitive)" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for parameter 'contextValue'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>33</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/strategy/constraints/StringConstraintOperator.java</file>
+  <line>78</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.strategy.constraints</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.strategy.constraints.StringConstraintOperator boolean contains(java.util.List&lt;java.lang.String&gt; values, java.util.Optional&lt;java.lang.String&gt; contextValue, boolean caseInsensitive)" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for parameter 'contextValue'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>33</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/strategy/constraints/StringConstraintOperator.java</file>
+  <line>97</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.strategy.constraints</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.strategy.constraints.StringConstraintOperator boolean isIn(java.util.List&lt;java.lang.String&gt; values, java.util.Optional&lt;java.lang.String&gt; value, boolean caseInsensitive)" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for parameter 'value'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>46</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/main/java/io/getunleash/variant/VariantUtil.java</file>
+  <line>69</line>
+  <module>unleash-client-java</module>
+  <package>io.getunleash.variant</package>
+  <entry_point TYPE="method" FQNAME="io.getunleash.variant.VariantUtil java.lang.String getSeed(io.getunleash.UnleashContext unleashContext, java.util.Optional&lt;java.lang.String&gt; stickiness)" />
+  <problem_class id="OptionalUsedAsFieldOrParameterType" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">'Optional' used as field or parameter type</problem_class>
+  <description>&lt;code&gt;Optional&lt;String&gt;&lt;/code&gt; used as type for parameter 'stickiness'</description>
+  <highlighted_element>Optional&lt;String&gt;</highlighted_element>
+  <language>JAVA</language>
+  <offset>65</offset>
+  <length>16</length>
+</problem>
+</problems>

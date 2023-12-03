@@ -9,11 +9,17 @@ import java.util.Map;
 import java.util.Optional;
 
 public class UnleashContext {
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private final Optional<String> appName;
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private final Optional<String> environment;
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private final Optional<String> userId;
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private final Optional<String> sessionId;
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private final Optional<String> remoteAddress;
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // intellij-suppression-optional-used-as-field
     private final Optional<ZonedDateTime> currentTime;
 
     private final Map<String, String> properties;
