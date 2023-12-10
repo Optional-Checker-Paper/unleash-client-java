@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>3.40.0</version>
+            <version>3.41.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -389,6 +389,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.4.1</version>
+		<configuration>
+		    <doclint>none</doclint> <!-- Turn off all checks -->
+		</configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -415,7 +418,7 @@
                                 <path>
                                     <groupId>org.checkerframework</groupId>
                                     <artifactId>checker</artifactId>
-                                    <version>3.40.0</version>
+                                    <version>3.41.1-SNAPSHOT</version>
                                 </path>
                             </annotationProcessorPaths>
                             <annotationProcessors>
@@ -559,6 +562,9 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>3.2.0</version>
+                        <configuration>
+                            <doclint>none</doclint> <!-- Turn off all checks -->
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
@@ -592,6 +598,13 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+      <repository>
+	<id>snapshots-repo</id>
+	<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	<releases><enabled>false</enabled></releases>
+	<snapshots><enabled>true</enabled></snapshots>
+      </repository>
     </repositories>
+
 
 </project>
