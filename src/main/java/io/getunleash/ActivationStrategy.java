@@ -20,8 +20,7 @@ public final class ActivationStrategy {
                 Collections.emptyList());
     }
 
-    @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate : unnecessary optional
-    // instantiation
+    @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate
     public ActivationStrategy(
             String name,
             @Nullable Map<String, String> parameters,
