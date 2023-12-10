@@ -32,6 +32,7 @@ public class ApplicationHostnameStrategy implements Strategy {
         return NAME;
     }
 
+    @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate
     @Override
     public boolean isEnabled(Map<String, String> parameters) {
         return Optional.ofNullable(parameters.get(HOST_NAMES_PARAM))

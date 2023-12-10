@@ -659,8 +659,7 @@ public class UnleashConfig {
             return this;
         }
 
-        @SuppressWarnings(
-                "optional:introduce.eliminate") // introduce-eliminate
+        @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate
         public UnleashConfig build() {
             return new UnleashConfig(
                     unleashAPI,
@@ -695,8 +694,7 @@ public class UnleashConfig {
                     proxyAuthenticator);
         }
 
-        @SuppressWarnings(
-                "optional:introduce.eliminate") // introduce-eliminate
+        @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate
         public String getDefaultSdkVersion() {
             String version =
                     Optional.ofNullable(getClass().getPackage().getImplementationVersion())
