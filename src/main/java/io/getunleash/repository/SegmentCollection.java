@@ -30,9 +30,10 @@ public final class SegmentCollection implements Serializable {
         }
     }
 
-    @SuppressWarnings({"optional:introduce.eliminate", // introduce-eliminate
-                    "optional:optional.collection" // optional-collection
-                    })
+    @SuppressWarnings({
+        "optional:introduce.eliminate", // introduce-eliminate
+        "optional:optional.collection" // optional-collection
+    })
     private Collection<Segment> ensureNotNull(@Nullable Collection<Segment> segments) {
         return Optional.ofNullable(segments).orElseGet(Collections::emptyList);
     }

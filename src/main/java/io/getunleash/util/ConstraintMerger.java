@@ -11,9 +11,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ConstraintMerger {
-    @SuppressWarnings({"optional:introduce.eliminate", // introduce-eliminate
-                    "optional:optional.collection" // optional-collection
-                    })
+    @SuppressWarnings({
+        "optional:introduce.eliminate", // introduce-eliminate
+        "optional:optional.collection" // optional-collection
+    })
     public static List<Constraint> mergeConstraints(
             IFeatureRepository repository, ActivationStrategy strategy) {
         return Stream.of(
