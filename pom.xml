@@ -433,6 +433,7 @@
                                 <arg>-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno</arg>
                                 <arg>-AassumePure</arg>
                                 <arg>-AwarnUnneededSuppressions</arg>
+                                <arg>-AassumeAssertionsAreEnabled</arg>
                                 <!-- <arg>-Awarns</arg> --> <!-- -Awarns turns type-checking errors into warnings. -->
                             </compilerArgs>
                         </configuration>
