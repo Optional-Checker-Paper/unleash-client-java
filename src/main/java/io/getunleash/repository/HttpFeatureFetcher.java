@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 public class HttpFeatureFetcher implements FeatureFetcher {
     private static final Logger LOG = LoggerFactory.getLogger(HttpFeatureFetcher.class);
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private Optional<String> etag = Optional.empty();
 
     private final UnleashConfig config;

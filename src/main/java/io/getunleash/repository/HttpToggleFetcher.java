@@ -20,7 +20,7 @@ public final class HttpToggleFetcher implements ToggleFetcher {
 
     private static final int CONNECT_TIMEOUT = 10000;
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private Optional<String> etag = Optional.empty();
 
     private final URL toggleUrl;

@@ -66,7 +66,7 @@ public final class VariantUtil {
         return "" + randSeed;
     }
 
-    @SuppressWarnings("optional:optional.parameter") // optional-parameter
+    @SuppressWarnings("optional:optional.parameter") // style-optional-parameter
     private static String getSeed(UnleashContext unleashContext, Optional<String> stickiness) {
         return stickiness
                 .map(s -> unleashContext.getByName(s).orElse(randomString()))

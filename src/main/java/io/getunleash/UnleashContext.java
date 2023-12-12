@@ -9,22 +9,22 @@ import java.util.Map;
 import java.util.Optional;
 
 public class UnleashContext {
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private final Optional<String> appName;
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private final Optional<String> environment;
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private final Optional<String> userId;
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private final Optional<String> sessionId;
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private final Optional<String> remoteAddress;
 
-    @SuppressWarnings("optional:optional.field") // optional-field
+    @SuppressWarnings("optional:optional.field") // style-optional-field
     private final Optional<ZonedDateTime> currentTime;
 
     private final Map<String, String> properties;

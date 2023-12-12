@@ -23,7 +23,7 @@ public final class RemoteAddressStrategy implements Strategy {
         return false;
     }
 
-    @SuppressWarnings("optional:introduce.eliminate") // introduce-eliminate
+    @SuppressWarnings("optional:introduce.eliminate") // style-introduce-eliminate
     @Override
     public boolean isEnabled(Map<String, String> parameters, UnleashContext context) {
         return Optional.ofNullable(parameters.get(PARAM))
