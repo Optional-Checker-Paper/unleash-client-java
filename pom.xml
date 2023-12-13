@@ -423,7 +423,7 @@
                             </annotationProcessorPaths>
                             <annotationProcessors>
                                 <!-- Add all the checkers you want to enable here -->
-                                <annotationProcessor>org.checkerframework.checker.optional.OptionalChecker</annotationProcessor>
+                                <annotationProcessor>org.checkerframework.common.util.count.report.ReportChecker</annotationProcessor>
                             </annotationProcessors>
                             <compilerArgs>
                                 <arg>-Xmaxerrs</arg>
@@ -434,6 +434,8 @@
                                 <arg>-AassumePure</arg>
                                 <arg>-AwarnUnneededSuppressions</arg>
                                 <arg>-AassumeAssertionsAreEnabled</arg>
+                                <arg>-AReportChecker_warns</arg>
+                                <arg>-Astubs=${project.basedir}/reportoptional.astub</arg>
                                 <!-- <arg>-Awarns</arg> --> <!-- -Awarns turns type-checking errors into warnings. -->
                             </compilerArgs>
                         </configuration>
