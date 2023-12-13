@@ -21,6 +21,7 @@ public final class UserWithIdStrategy implements Strategy {
         return false;
     }
 
+    @SuppressWarnings("optional:introduce.eliminate") // style-introduce-eliminate
     @Override
     public boolean isEnabled(Map<String, String> parameters, UnleashContext unleashContext) {
         return unleashContext
